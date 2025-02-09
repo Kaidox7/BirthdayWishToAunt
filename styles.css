@@ -1,0 +1,58 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background-color: #ffe6e6;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    flex-direction: column;
+}
+.hidden {
+    display: none;
+}
+#countdown {
+    font-size: 2rem;
+    color: #ff4d4d;
+    margin-bottom: 20px;
+}
+.container, #introMessage {
+    opacity: 0;
+    transition: opacity 2s ease-in-out;
+}
+h1 {
+    font-size: 2.5rem;
+    animation: bounceText 2s infinite alternate ease-in-out;
+    color: #ff4d4d;
+}
+#introMessage {
+    font-size: 3rem;
+    font-weight: bold;
+    color: #ff0000;
+    animation: fadeIn 3s ease-in-out;
+}
+@keyframes fadeIn {
+    0% { opacity: 0; transform: scale(0.8); }
+    100% { opacity: 1; transform: scale(1); }
+}
+@keyframes bounceText {
+    0% { transform: translateY(0) scale(1); }
+    50% { transform: translateY(-10px) scale(1.1); }
+    100% { transform: translateY(10px) scale(0.95); }
+}
+.emoji-container span {
+    font-size: 2.5rem;
+    cursor: pointer;
+    margin: 10px;
+    transition: transform 0.3s ease-in-out;
+}
+.heart { animation: pump 1s infinite; }
+@keyframes pump { 0%, 100% { transform: scale(1); } 50% { transform: scale(1.2); } }
+.doughnut { animation: rotate 3s linear infinite; }
+@keyframes rotate { from { transform: rotate(0deg); } to { transform: rotate(360deg); } }
+.cake { animation: bounce 1.5s infinite alternate; }
+@keyframes bounce { from { transform: translateY(0); } to { transform: translateY(-10px); } }
+.language-selector { position: fixed; top: 10px; left: 10px; }
+select { font-size: 1rem; padding: 5px; }
