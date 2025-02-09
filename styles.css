@@ -48,11 +48,27 @@ h1 {
     margin: 10px;
     transition: transform 0.3s ease-in-out;
 }
-.heart { animation: pump 1s infinite; }
-@keyframes pump { 0%, 100% { transform: scale(1); } 50% { transform: scale(1.2); } }
-.doughnut { animation: rotate 3s linear infinite; }
-@keyframes rotate { from { transform: rotate(0deg); } to { transform: rotate(360deg); } }
-.cake { animation: bounce 1.5s infinite alternate; }
-@keyframes bounce { from { transform: translateY(0); } to { transform: translateY(-10px); } }
-.language-selector { position: fixed; top: 10px; left: 10px; }
+.heart {
+            animation: pump 1s infinite;
+        }
+        @keyframes pump {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.2); }
+        }
+        /* Doughnut Rotation */
+        .doughnut {
+            animation: rotate 3s linear infinite;
+        }
+        @keyframes rotate {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+        }
+        /* Cake Bouncing */
+        .cake {
+            animation: bounce 1.5s infinite alternate;
+        }
+        @keyframes bounce {
+            from { transform: translateY(0); }
+            to { transform: translateY(-10px); }
+        }
 select { font-size: 1rem; padding: 5px; }
